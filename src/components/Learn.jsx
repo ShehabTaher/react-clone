@@ -1,8 +1,9 @@
 import React from 'react'
+import FirstScreen from './FirstScreen'
 
 const Learn = () => {
     return (
-        <div>Learn</div>
+        <FirstScreen Heading={"Learn"} />
     )
 }
 

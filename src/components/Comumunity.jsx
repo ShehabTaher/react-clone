@@ -1,8 +1,10 @@
 import React from 'react'
+import FirstScreen from './FirstScreen'
 
 const Comumunity = () => {
     return (
-        <div>Comumunity</div>
+        <FirstScreen Heading={"Comumunity"} />
+
     )
 }
 

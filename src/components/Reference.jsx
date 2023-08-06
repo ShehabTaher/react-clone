@@ -1,8 +1,9 @@
 import React from 'react'
+import FirstScreen from './FirstScreen'
 
 const Reference = () => {
     return (
-        <div>Reference</div>
+        <FirstScreen Heading={"Reference"} />
     )
 }
 
