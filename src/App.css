@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
+:root {
+  --dark-primary-color: #333a45;
+  --light-primary-color: #fff;
+  --dark-text-color: #fff;
+  --light-text-color: #404756;
+  --dark-span-color: #404756;
+  --light-span-color: #dad8d8;
+}
 .App {
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -25,8 +33,22 @@
   color: #61dafb;
 }
 
-:root {
-  --primary-color: #333a45;
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  transition: background 0.3s ease-in-out, color 0.6s ease-in-out;
+}
+
+body.light {
+  --background-color: var(--light-primary-color);
+  --text-color: var(--light-text-color);
+  --span-color: var(--light-span-color);
+}
+body.dark {
+  --background-color: var(--dark-primary-color);
+  --text-color: var(--dark-text-color);
+  --span-color: var(--dark-span-color);
 }
 
 // NavBar
@@ -39,10 +61,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0f172a;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   position: sticky;
   top: 0;
+  z-index: +99;
 }
 
 nav .title {
@@ -50,7 +73,7 @@ nav .title {
   margin: 1rem;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 nav ul {
@@ -64,7 +87,8 @@ nav ul li {
 nav ul li a {
   display: block;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
+  /* top: 10px; */
   padding: 0.5rem;
   margin: 0 0.5rem;
   border-radius: 0.5rem;
@@ -123,8 +147,9 @@ nav .menu span {
   }
 }
 .search-bar {
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   display: flex;
+  width: 100%;
   left: 0;
   border-radius: 15px;
   height: auto;
@@ -150,15 +175,40 @@ nav .menu span {
 #SearchIcon {
   color: #566885;
 }
+
+#darkMode {
+  background: transparent url("../src/Asset/vector33.svg") no-repeat center;
+  background-size: 30px 30px;
+  width: 70px;
+  height: 70px;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+}
+
+#darkMode:hover,
+#darkMode:focus {
+  filter: none;
+  background-color: var(--span-color);
+  cursor: pointer;
+}
+
+#darkMode.clicked {
+  filter: none !important;
+  background: transparent url("../src/Asset/vector34.svg") no-repeat center;
+}
+/* Screens */
 .secondScreen {
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   height: auto;
   padding: 150px 0;
 }
 
 .main-screen {
-  background-color: #23272f;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   height: 100vh;
   font-size: 36px;
   padding-top: 150px;
@@ -172,13 +222,13 @@ nav .menu span {
   border-radius: 30px;
   padding: 10px 50px;
   margin: 10px;
-  color: white;
+  color: var(--text-color);
   background-color: #087ea4;
   border: 1px solid #404756;
 }
 
 .main-screen Button:hover {
-  background-color: #185f77;
+  background-color: var(--background-color);
   border: 1px solid #404756;
 }
 .main-screen .second-btn {
@@ -189,7 +239,7 @@ nav .menu span {
 }
 
 .secondScreen span {
-  background-color: #404756;
+  background-color: var(--span-color);
   border-radius: 10px;
   padding: 5px;
 }
@@ -225,8 +275,8 @@ nav .menu span {
   border-radius: 30px;
   padding: 10px 30px;
   margin: auto;
-  color: white;
-  background-color: #23272f;
+  color: var(--text-color);
+  background-color: var(--background-color);
   border: 1px solid #404756;
 }
 .secondScreen .second-btn:hover {
@@ -239,13 +289,13 @@ nav .menu span {
   text-decoration: underline;
 }
 .second-btn svg {
-  fill: #fff !important ;
+  fill: var(--text-color) !important ;
 }
 
 .footer {
   display: flex;
-  background-color: #16181d;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
   justify-content: space-around;
   align-items: flex-start;
   text-align: left;
@@ -256,8 +306,7 @@ nav .menu span {
 .links {
   display: flex;
   grid-template-columns: repeat(2, 1fr);
-  background-color: #16181d;
-  color: #fff;
+  background-color: var(--background-color);
   justify-content: space-between;
   gap: 100px;
   align-items: flex-start;
@@ -270,7 +319,7 @@ nav .menu span {
 }
 .link-list a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   padding: 10px 0;
 }
 .link-list a:hover {
@@ -282,22 +331,23 @@ nav .menu span {
 }
 /* Blogs */
 .blogs {
-  background-color: #282c34;
+  background-color: var(--background-color);
 }
 .mini-blog {
   width: 60%;
   text-align: left;
   border-radius: 15px;
   border: 1px solid #537f8e;
-  background-color: #23272f;
+  background-color: var(--background-color);
   padding: 15px;
-  margin: 15px auto;
+  margin: auto;
+  margin-bottom: 15px;
 }
 .mini-blog:hover {
   background-color: #333a453b;
 }
 .mini-blog h2 {
-  color: #fff;
+  color: var(--text-color);
   font-weight: 500;
 }
 .mini-blog h2:hover {
@@ -305,9 +355,52 @@ nav .menu span {
 }
 .mini-blog {
   font-size: 18px !important;
-  color: #fff;
+  color: var(--text-color);
 }
 
+/* Images Slider */
+.slider {
+  height: 400px;
+  margin: auto;
+  position: relative;
+  width: 80%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.slide-track {
+  display: flex;
+  width: calc(250px * 8);
+  animation: scroll 30s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 4));
+  }
+}
+
+.slide {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.img-slide {
+  height: 200px;
+  width: 200px;
+  transform: rotate(-10deg);
+  border-radius: 5px;
+}
+.img-slide:hover {
+  transform: rotate(0deg);
+  height: 250px;
+  width: 250px;
+  transition: ease-in-out 0.3s;
+}
 /* Image */
 
 .img-section {
@@ -315,6 +408,7 @@ nav .menu span {
 }
 /* Boxes */
 .separate-boxes {
+  background-color: var(--background-color);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -329,7 +423,7 @@ nav .menu span {
 .boxes-head {
   text-align: left;
   font-size: 24px !important;
-  color: #537f8e;
+  color: var(--text-color);
   margin-left: 150px;
 }
 .mini-boxes {
@@ -344,10 +438,10 @@ nav .menu span {
   text-align: left;
   border-radius: 15px;
   border: 1px solid #537f8e;
-  background-color: #23272f;
+  background-color: var(--background-color);
   padding: 15px;
   margin: 15px auto;
-  color: #fff;
+  color: var(--text-color);
 }
 .mini-box:hover {
   background-color: #353a4363;

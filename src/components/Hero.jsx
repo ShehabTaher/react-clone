@@ -10,6 +10,7 @@ import ThirdImage from '../Asset/3.jpeg'
 import FourthImage from '../Asset/4.jpeg'
 import FifthImage from '../Asset/5.jpeg'
 import SixthImage from '../Asset/6.jpeg'
+import Slider from './Slider'
 
 const Hero = () => {
     return (
@@ -129,7 +130,7 @@ const Hero = () => {
                 <p>
                     You’re not alone. Two million developers from all over the world visit the React docs every month. React is something that people and teams can agree on.
                 </p>
-                <img src={SixthImage} alt='section6' className='img-section' />
+                <Slider />
                 <p>
                     This is why React is more than a library, an architecture, or even an ecosystem. React is a community. It’s a place where you can ask for help, find opportunities, and meet new friends. You will meet both developers and designers, beginners and experts, researchers and artists, teachers and students. Our backgrounds may be very different, but React lets us all create user interfaces together.
                 </p>

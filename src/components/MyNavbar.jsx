@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import ReactIcon from '../Asset/logo192.png'
 import { Link, NavLink } from "react-router-dom";
-// import { Navbar, Container, Nav, NavDropdown, Offcanvas, Form, FormControl, Button } from 'react-bootstrap';
 import SearchBar from './SearchBar';
+import ToggleSwitchMode from './ToggleSwitchMode';
+import { LiaGithub } from 'react-icons/lia';
+
 const MyNavbar = () => {
+
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <>
@@ -19,6 +22,7 @@ const MyNavbar = () => {
                     <span></span>
                 </div>
                 <SearchBar />
+
                 <ul className={menuOpen ? "open" : ""}>
 
                     <li>
@@ -34,7 +38,12 @@ const MyNavbar = () => {
                         <NavLink to="/blogs">Blogs</NavLink>
                     </li>
                 </ul>
-
+                <ToggleSwitchMode />
+                <div className='link-list'>
+                    <div className='social'>
+                        <a href='https://github.com/facebook/react/releases'><LiaGithub style={{ width: '25px', height: '25px' }} /></a>
+                    </div>
+                </div>
             </nav>
             {/*             
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
