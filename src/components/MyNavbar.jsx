@@ -41,6 +41,7 @@ const MyNavbar = () => {
                 <ToggleSwitchMode />
                 <div className='link-list'>
                     <div className='social'>
+
                         <a href='https://github.com/facebook/react/releases'><LiaGithub style={{ width: '25px', height: '25px' }} /></a>
                     </div>
                 </div>
