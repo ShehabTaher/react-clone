@@ -1,6 +1,9 @@
 import React from 'react'
 
 const MiniBlog = ({ Heading, children }) => {
+    const handlecliceked = (value) => {
+        return console.log(value);
+    }
     return (
         <div className='mini-blog'>
             <div>
