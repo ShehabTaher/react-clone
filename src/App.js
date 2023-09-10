@@ -7,6 +7,7 @@ import Blogs from './components/Blogs';
 import Learn from './components/Learn'
 import Reference from './components/Reference'
 import Comumunity from './components/Comumunity'
+import SingleBlog from './components/SingleBlog';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/reference" element={<Reference />} />
         <Route path="/comumunity" element={<Comumunity />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:id" element={<SingleBlog />} />
       </Routes>
 
       <Footer />

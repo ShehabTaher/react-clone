@@ -1,8 +1,12 @@
-// import { combineReducers } from 'redux';
-// import dataReducer from './reducer';
+import { combineReducers } from '@reduxjs/toolkit';
+import userReducer from './userSlice';
+import userIdReducer from './userIdSlice'
+import blogIdReducer from './blogIdSlice'
 
-// const rootReducer = combineReducers({
-//     data: dataReducer,
-// });
+const rootReducer = combineReducers({
+    user: userReducer,
+    userId: userIdReducer,
+    blogId: blogIdReducer
+});
 
-// export default rootReducer;
+export default rootReducer;

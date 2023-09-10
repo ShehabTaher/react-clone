@@ -378,6 +378,125 @@ nav .menu span {
   color: var(--text-color);
 }
 
+/* Single Blog */
+.single-blog {
+  background-color: var(--background-color);
+  padding-bottom: 40px;
+  padding: 20px 40px;
+  text-align: left;
+  font-size: larger;
+}
+.ruler {
+  border: 0.5px solid #537f8e50;
+}
+.single-blog-width {
+  width: 70%;
+  margin: auto;
+}
+.single-blog h1 {
+  font-size: 48px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.single-blog .mini-date {
+  padding: 0;
+}
+.mini-single-blog p {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 40px 0px;
+}
+.single-blog a {
+  text-decoration: none;
+}
+.mini-single-blog {
+  text-align: left;
+  background-color: var(--background-color);
+  padding: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.mini-single-blog h2 {
+  color: var(--text-color);
+  font-weight: 500;
+}
+.mini-single-blog {
+  font-size: 18px !important;
+  color: var(--text-color);
+}
+.blog-block-paragraph span {
+  background-color: var(--span-color);
+  border-radius: 10px;
+  padding: 5px;
+}
+.blog-block-paragraph {
+  width: 70%;
+  padding: 20px;
+  margin: auto;
+}
+.blog-block-paragraph h2 {
+  padding-bottom: 20px;
+}
+
+.Blog-Note {
+  width: 70%;
+  margin: auto;
+  background-color: #48a3922e;
+  padding: 20px;
+  border-radius: 15px;
+}
+.Blog-Note h2 {
+  color: #44ac99;
+}
+.blogs-link {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blogs-link a {
+  margin: auto;
+  text-align: center;
+}
+.blog-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  padding: 50px;
+  text-align: center;
+  margin: left;
+}
+.blog-link:hover {
+  background-color: #8494c057;
+}
+.blog-survey {
+  margin: auto;
+  margin-top: 20px;
+  padding: auto;
+  text-align: center;
+}
+.blog-survey button {
+  cursor: pointer !important;
+  font-size: 24px;
+  border-radius: 30px;
+  padding: 10px 50px;
+  margin: 10px;
+  color: var(--text-color);
+  background-color: #087ea4;
+  border: 1px solid #404756;
+}
+
+.blog-survey Button:hover {
+  background-color: var(--background-color);
+  border: 1px solid #404756;
+}
+.blog-survey svg {
+  padding-left: 5px;
+  fill: var(--text-color) !important ;
+}
 /* Images Slider */
 .slider {
   height: 400px;
@@ -531,5 +650,13 @@ nav .menu span {
   }
   .mini-box {
     width: 100%;
+  }
+  .single-blog-width {
+    width: 100%;
+    margin: auto;
+  }
+  .blog-block-paragraph {
+    width: 100%;
+    margin: auto;
   }
 }
